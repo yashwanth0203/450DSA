@@ -41,6 +41,7 @@ int min_heap(vector<int> &nums,int k){
         return quick_select(0, nums.size() - 1, nums, k);
     }*/
 
+/*In this approach we take a pivot element and variable p such that all the elements to left to p are greater than p and right to p are less than p*/
     int quick_select(int l, int r, vector<int>& nums, int k) {
         /*int rand_pivot = l + rand() % (r - l + 1);
         int pivot = nums[rand_pivot];
