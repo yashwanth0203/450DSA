@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*void reverse(int arr[],int n){
+void reverse(int arr[],int n){
     int i=0;
     while(i<n){
         int temp=arr[i];
@@ -21,7 +21,7 @@ int  main(){
     for(int i=0;i<n;i++)
         cout<<arr[i]<<" ";
     return 0;
-}*/
+}
 
 
 //Recursive
