@@ -7,6 +7,16 @@ Given the array nums after the possible rotation and an integer target, return t
 is in nums, or -1 if it is not in nums.
 You must write an algorithm with O(log n) runtime complexity.*/
 
+
+/*Here the array is divided into two halves left and right both of which are sorted.But we need to know
+which of them is right or left.This can be done by comparing the element with left element.Since the 
+left half is increasing from the left element if the element is greater than left it means that 
+it is the left array but if the element is less than left it means that we are in the right half
+of the array.Now there arises two cases in each left or right part.In the left half if the target is
+greater than the element we can increase low also if target is less than left which means it is in 
+right half we do the same.Else we decrease the high.Now in the right half of the array we need to check
+whether the target is less than mid if its true then we do high=mid-1 similarly when target is more
+than right we do high=mid-1 else low=mid+1.This is the approach. */
 #include <bits/stdc++.h>
 using namespace std;
 
