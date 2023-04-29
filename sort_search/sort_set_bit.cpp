@@ -30,7 +30,28 @@ void printArr(int arr[], int n)
         cout << arr[i] << " ";
 }
 
-
+unsigned int countSetBits2(unsigned int n)
+   {
+      unsigned int count = 0;
+       while (n) {
+        count += n & 1;
+        n >>= 1;
+       }
+      return count;
+    }
+    void sortBySetBitCount2(int arr[], int n)
+    {
+        // Your code goes here
+        multimap<int,int,greater<int>>mp;
+        for(int i = 0;i < n;i++){
+            unsigned int count = countSetBits2(arr[i]);
+            mp.insert({count,arr[i]});
+        }
+        int i = 0;
+        for(auto it : mp){
+            arr[i] = it.second;i++;
+        }
+    }
 int main()
 {
     int arr[] = {5, 2, 3, 9, 4, 6, 7, 15, 32};
