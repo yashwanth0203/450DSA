@@ -30,10 +30,10 @@ time to merge overlapping intervals.We already know the approach take idx to be 
 be second range if end of first is greater than second then merge them.If thats not the case we can 
 make idx to be i that is for example assume there are two intervals (1,7),(3,9),(8,14),(20,22).Now idx will be
 at 0th range and i will be at 1st range now we will merge both of them leading to (1,9) (3,9) (8,14) (20,22).Next
-iteration its compared again when i is at 2 then the merged will be (1,14) (3,9) (8,9) (20,22).In next iteration when
+iteration its compared again when i is at 2 then the merged will be (1,14) (3,9) (8,14) (20,22).In next iteration when
 i is at 3 its compared 9<20 then we can increase idx since there is no overlapping.Now the result must be
 (1,14) (20,22) but what we got is 4 ranges wherein two are already included in first.Hence we will
-make idx values to be as i and the result would be (1,14) (20,22) (8,9) (20,22).Now only first two indices
+make idx values to be as i and the result would be (1,14) (20,22) (8,14) (20,22).Now only first two indices
 are necessary hence while searching we use only till idx for iteration.Now lets come to searching part
 initially i will be at 0th range we will check whether k is at this interval by last-first+1 the reason
 being used +1 is because its inclusive.If its in that range we will declare ans as first+k-1 the reason
