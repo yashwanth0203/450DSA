@@ -1,5 +1,11 @@
 /*Write a function that moves the last node to the front in a given Singly Linked List.*/
 
+/*Traverse the linked list till the last node and Initialize two pointers to store the address of the 
+last and the second last node
+Then follow these three steps to move the last node to the front
+Make second last as last (secLast->next = NULL). 
+Set next of last as head (last->next = head). 
+Make last as head ( head = last)*/
 #include <bits/stdc++.h>
 using namespace std;
 
